@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Icon font -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>New Tab</title>
+  </head>
+  <body>
+    <h1>MAIN</h1>
+    <!-- Navigation Bar -->
+    <div id="nav">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Academy</a></li>
+        <li><a href="">Development</a></li>
+      </ul>
+    </div>
+    <!-- Search Bar -->
+    <div id="searchBar">
+      <form action="http://google.com/search">
+        <input type="text" placeholder="Search.." name="query" id="query" />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+
+    <!-- addingPopup -->
+    <div id="bookmarkBorder">
+      <div id="openPopup" class="bookmark">Add new +</div>      
+
+
+    </div>
+      <div id="outSideOfPopup" class="popup">
+        <div class="popup-content">
+          <a id="xButton" href="#" class="xButton">X</a>
+          <input id="nameInput" class="firstInput" type="text " placeholder="Name" autocomplete="off"/>
+          <input id="urlInput" type="text" placeholder="" value="http://" autocomplete="off"/>
+          <a id="addButton" href="#" class="button">Add</a>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
