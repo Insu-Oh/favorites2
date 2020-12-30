@@ -1,29 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Merriweather:ital,wght@1,900&display=swap');
 body {
-  background-color: #2b2b2b;
+  background-color: #343148;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Bitter', serif;
 }
 a {
   text-decoration: none;
 }
 h1 {
+  color: #d7c49e;
   text-align: center;
-  color: white;
   padding: 50px;
   margin: 0;
   font-size: 50px;
-  font-family: fantasy;
+  font-family: 'Bitter', serif;
+}
+h2 {
+  margin-top: 50px;
+  color: #d7c49e;
+  text-align: center;
+  padding: 50px;
+  margin: 0;
+  font-size: 30px;
+  font-family: 'Bitter', serif;
+}
+p {
+  color: #d7c49e;
+  text-align: center;
+  padding: 50px;
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Bitter', serif;
 }
 /* Navigation */
 #nav ul {
   list-style-type: none;
-  background-color: #333;
+  background-color: #343148;
   text-align: center;
   margin: 0;
   padding: 0;
   transition: 0.6;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid #d7c49e;
+  border-bottom: 1px solid #d7c49e;
 }
 #nav li {
   cursor: pointer;
@@ -34,12 +53,12 @@ h1 {
 #nav a {
   text-decoration: none;
   display: block;
-  color: white;
+  color: #d7c49e;
   padding-left: 10px;
   padding-right: 10px;
 }
 #nav li:hover {
-  background-color: #111;
+  background-color: #2c2a3d;
 }
 /* Search Bar */
 #searchBar {
@@ -47,19 +66,24 @@ h1 {
   text-align: center;
 }
 #searchBar input {
+  color: #343148;
+  font-family: 'Bitter', serif;
+  background-color: #d7c49e;
   border: none;
-  width: 200px;
+  width: 500px;
   border-radius: 25px;
-  padding: 18px;
-  padding-right: 300px;
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 60px;
   margin-top: 40px;
   margin-right: -55px;
-  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.5);
+  outline: none;
+  font-size: 1em;
 }
 #searchBar button {
   float: center;
   padding: 16px 16px;
-  background: white;
+  background: #d7c49e;
   cursor: pointer;
   font-size: 16px;
   border: none;
@@ -76,13 +100,15 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Bitter', serif;
   flex-wrap: wrap;
-  font-size: 1.2em;
+  font-size: 1.3em;
   padding: 70px;
 }
 .bookmark {
+  justify-content: center;
   position: relative;
-  color: #454545;
+  color: #343148;
   text-align: center;
   margin: 15px;
   border: none;
@@ -91,19 +117,24 @@ h1 {
   height: 100px;
   line-height: 100px;
   padding: 40px;
-  background-color: white;
+  background-color: #d7c49e;
   border-radius: 40px 20px 40px 20px;
-  box-shadow: 0px 20px 20px rgba(0, 0, 0, 1);
+}
+.bookmark a {
+  display: block;
+  color: #343148;
 }
 #openPopup {
   order: 1;
   color: #616161;
-  background: #d4d4d4;
+  background: #e3cfa8;
+}
+#settingButton {
+  order: 2;
 }
 
 .bookmark:hover {
-  background-color: #cfcfcf;
-  width: 130px;
+  width: 140px;
   border-radius: 20px 40px 20px 40px;
   transition: 0.5s;
   cursor: pointer;
@@ -114,19 +145,19 @@ h1 {
   transition: 0.5s;
 }
 
-.bookmark .xButton2 {
+.xButton2 {
   order: 2;
   position: absolute;
-  line-height: 24px;
+  line-height: 27px;
   float: right;
   margin: 0;
   top: 15px;
   right: 15px;
   height: 25px;
   width: 25px;
-  background: #a3a3a3;
+  background: #343148;
   border-radius: 30%;
-  color: white;
+  color: #d7c49e;
 }
 
 .popup {
@@ -143,7 +174,7 @@ h1 {
   border-radius: 5%;
   position: relative;
   align-items: center;
-  background: #424242;
+  background: #343148;
   width: 400px;
   height: 270px;
   box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.7);
@@ -153,6 +184,7 @@ h1 {
 }
 
 .popup input {
+  background-color: #d7c49e;
   display: block;
   align-items: center;
   margin: 15px auto;
@@ -171,13 +203,14 @@ h1 {
   margin-top: 30px;
   padding: 10px 15px;
   width: 80px;
-  background: #1b1b1b;
+
   text-decoration: none;
   border-radius: 10px;
-  color: white;
+  color: #d7c49e;
+  border: 1px solid #d7c49e;
 }
 .popup .button:hover {
-  background: #262626;
+  background: #2c2a3d;
   transition: 0.2s;
 }
 .popup .xButton {
@@ -187,10 +220,23 @@ h1 {
   right: 15px;
   justify-content: end;
   text-decoration: none;
-  color: white;
-  background-color: #1b1b1b;
   width: 30px;
   height: 30px;
   border-radius: 50%;
   line-height: 30px;
+  color: #d7c49e;
+  border: 1px solid #d7c49e;
+}
+.colorSetting {
+  margin: 20px;
+  float: right;
+  cursor: pointer;
+}
+.anycolor {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 30%;
+  background-color: red;
 }
