@@ -11,36 +11,43 @@
     <title>New Tab</title>
   </head>
   <body>
-    <h1>MAIN</h1>
+    <h1>Home</h1>
     <!-- Navigation Bar -->
     <div id="nav">
       <ul>
-        <li><a href="">Home</a></li>
+        <li><a href="/index.html">Home</a></li>
         <li><a href="">Academy</a></li>
         <li><a href="">Development</a></li>
+        <li><a href="/Credit.html">Credit</a></li>
       </ul>
+    </div>
+    <!-- color setting -->
+    <div class="colorSetting">
+      <div class="anycolor" id="color1" ></div>
     </div>
     <!-- Search Bar -->
     <div id="searchBar">
       <form action="http://google.com/search">
-        <input type="text" placeholder="Search.." name="query" id="query" />
+        <input type="text" placeholder="Search.." name="query" id="query" autocomplete="off"/>
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
     </div>
 
-    <!-- addingPopup -->
     <div id="bookmarkBorder">
-      <div id="openPopup" class="bookmark">Add new +</div>      
-
-
+      '<div id="openPopup" class="bookmark" onclick="openPopup()">Add new +</div>';
     </div>
-      <div id="outSideOfPopup" class="popup">
-        <div class="popup-content">
-          <a id="xButton" href="#" class="xButton">X</a>
-          <input id="nameInput" class="firstInput" type="text " placeholder="Name" autocomplete="off"/>
-          <input id="urlInput" type="text" placeholder="" value="http://" autocomplete="off"/>
-          <a id="addButton" href="#" class="button">Add</a>
+    
+    <!-- popup -->
+    <div id="outSideOfPopup" class="popup">
+      <div class="popup-content">
+        <a id="xButton" href="#" class="xButton">X</a>
+        <input id="nameInput" class="firstInput" type="text " placeholder="Name" autocomplete="off"/>
+        <input id="urlInput" type="text" placeholder="" value="http://" autocomplete="off"/>
+        <a id="addButton" href="#" class="button">Add</a>
     </div>
     <script src="main.js"></script>
   </body>
+  <footer>
+    This website is developed by Insu Oh.
+  </footer>
 </html>
