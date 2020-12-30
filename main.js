@@ -36,7 +36,6 @@ function addBookmark() {
 
 function delElements(index) {
   click = false;
-  setTimeout((click = true), 99000);
   console.log(click);
   elements.splice(index, 2);
   localStorage.setItem('MyBook', JSON.stringify(elements));
@@ -49,16 +48,16 @@ function display() {
     if (localStorage.getItem('MyBook') != null) {
       insideOfBookmark.innerHTML = '';
       insideOfBookmark.innerHTML +=
-        '<div id="openPopup" onclick="openPopup()" class="bookmark">Add new +</div>';
+        '<div id="openPopup" class="bookmark" onclick="openPopup()">Add new +</div>';
       for (var i = 0; i < elements.length; i += 2) {
         insideOfBookmark.innerHTML +=
-          '<a class="bookmark" href="' +
+          '<div class="bookmark"><a class="" href="' +
           elements[i + 1] +
           '">' +
           elements[i] +
-          '<div class="xButton2" onclick="delElements(' +
+          '</a><div class="xButton2" onclick="delElements(' +
           i +
-          ')">X</div></a>';
+          ')">X</div></div>';
       }
     }
   } else {
@@ -72,4 +71,25 @@ function openPopup() {
 
 function closePopup() {
   document.querySelector('.popup').style.display = 'none';
+}
+
+var colorButton1 = document.getElementById('color1');
+
+colorButton1.addEventListener('click', function () {
+  var color1 = '#d7c49e';
+  var color2 = '#343148';
+  changeColor(color1, color2);
+});
+
+function changeColor(color1, color2) {
+  var Body = document.querySelector('body');
+  var H1 = document.querySelector('h1');
+  var Nav = document.querySelector('#nav');
+  var Bookmark = document.querySelector('.bookmark');
+
+  Body.style.backgroundColor = color1;
+  H1.style.color = color2;
+  Nav.style.backgroundColor = color1;
+  Nav.style.color = color2;
+  Bookmark.style.backgroundColor = color2;
 }
